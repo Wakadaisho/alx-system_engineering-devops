@@ -23,3 +23,7 @@
 `20-hiago`: remove all letters `c` and `C` from input
 `21-reverse`: reverse the input
 `22-users_and_homes`: display all users and their home directories, sorted by users
+`100-empty_casks`: find all empty files and directories in the current directory and all sub-directories
+`101-gifs`: list all the files with a `.gif` extension in the current directory and all its sub-directories
+`102-acrostic`: decode acrostics that use the first letter of each line
+`103-the_biggest_fan`: parse web servers logs in TSV format as input and displays the 11 hosts or IP addresses which did the most requests
