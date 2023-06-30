@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# kills a separate, specific bash process
+
+pkill --signal SIGKILL -f "7-highlander"
