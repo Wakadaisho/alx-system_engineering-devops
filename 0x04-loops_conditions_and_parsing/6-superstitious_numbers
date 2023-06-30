@@ -1,0 +1,21 @@
+#!/bin/bash
+# This script is displaying numebers from 1 to 20,
+# with extra messages on the 4th, 9th and 17th iterations
+
+MAX=20
+count=1
+
+while [ $count -le $MAX ]
+do
+	echo "${count}"
+	if [ $count -eq 4 ]; then
+		echo "bad luck from China"
+	elif [ $count -eq 9 ]; then
+		echo "bad luck from Japan"
+	elif [ $count -eq 17 ]; then
+		echo "bad luck from Italy"
+	else
+		true
+	fi
+	(( count++ ))
+done

@@ -1,0 +1,11 @@
+#!/bin/bash
+# This script is displaying "Best School" 10 times using until
+
+MAX=10
+count=1
+
+until [ $count -le $MAX ]
+do
+	echo "Best School"
+	(( count++ ))
+done
