@@ -7,9 +7,9 @@ if [ -f school ] || [ -d school ]; then
 	size=$(find . -name "school" -printf "%s")
 
 	if [ "$size" == "0" ]; then
-		echo "school is empty"
+		echo "school file is empty"
 	else
-		echo "school is not empty"
+		echo "school file is not empty"
 	fi
 
 	if [ -f school ]; then

@@ -2,9 +2,9 @@
 # This script is displaying "Best School" 10 times using until
 
 MAX=10
-count=1
+count=0
 
-until [ $count -le $MAX ]
+until [ $count -eq $MAX ]
 do
 	echo "Best School"
 	(( count++ ))
