@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # This script displays the content of the current directory
 # in a list format, from the first dash onward
 

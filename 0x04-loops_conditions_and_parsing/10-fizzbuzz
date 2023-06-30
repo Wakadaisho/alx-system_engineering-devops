@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Displays numbers from 1 to 100, in classic FizzBuzz fashion
 
 

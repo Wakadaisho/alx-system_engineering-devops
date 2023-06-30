@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # This script is displaying numebers from 1 to 20,
 # with extra messages on the 4th, 9th and 17th iterations
 
