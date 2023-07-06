@@ -1,0 +1,4 @@
+#!/bin/bash
+# Start a server listening on port 98 using netcat
+
+nc -l 98

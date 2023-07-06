@@ -1,0 +1,7 @@
+#!/bin/bash
+# Edit the hosts file to change localhost ip
+# and add facebook.com alias
+
+sed -i.bkp \
+-e '/localhost/c\127.0.0.2\tlocalhost' \
+-e '$a\8.8.8.8\t\tfacebook.com' /etc/hosts 

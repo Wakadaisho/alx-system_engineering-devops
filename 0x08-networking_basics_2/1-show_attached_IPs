@@ -1,0 +1,4 @@
+#!/bin/bash
+# Show IPv4 IPs  attached to network interfaces
+
+ifconfig | sed -nre '/inet / s/.*inet //p' | cut -d' ' -f1
