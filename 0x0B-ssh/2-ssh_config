@@ -1,0 +1,10 @@
+# Part of ~/.ssh/config configuration
+# for alx server
+
+Host alx_web_01
+	HostName 100.26.165.122
+	User ubuntu
+	PasswordAuthentication no
+	IdentityFile ~/.ssh/school
+	ServerAliveInterval 15
+	ServerAliveCountMax 3
