@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
+# Connect to a SSH server using the user ubuntu
+# with the PK ~/.ssh/school
 
 ssh ubuntu@100.26.165.122 -i ~/.ssh/school
