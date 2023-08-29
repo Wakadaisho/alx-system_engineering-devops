@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 # Install nginx, redirect /redirect_me location to a youtube video
 
-REDIRECT=' \
-\tlocation /redirect_me/ { \
-\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4; \
-\t}'
+REDIRECT='rewrite ^/redirect_me http://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;'
 FILE="/etc/nginx/sites-available/default"
 
 sudo apt-get update
