@@ -2,18 +2,22 @@
 # Install nginx, redirect /redirect_me location to a youtube video
 # Add 404 error page
 
-REDIRECT="location /redirect_me {\n return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n }\n"
-NOT_FOUND="error_page 404 /custom_404.html;\n"
-ALL="\n$NOT_FOUND\n$REDIRECT"
+REDIRECT=' \
+\tlocation /redirect_me { \
+\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4; \
+\t}'
+NOT_FOUND=' \
+\terror_page 404 /custom_404.html;'
+ALL="$REDIRECT\n$NOT_FOUND"
 
 FILE="/etc/nginx/sites-available/default"
 
 sudo apt-get update
 sudo apt-get -y install nginx
 
-echo 'Hello World' > /var/www/html/index.html
-echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
+echo 'Hello World!' | sudo tee /var/www/html/index.html
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html
 
-sudo sed -i.bak "/^server \{.*/a $ALL" "$FILE"
+sudo sed -i "/^server {.*/a $ALL" "$FILE"
 
 sudo service nginx start
