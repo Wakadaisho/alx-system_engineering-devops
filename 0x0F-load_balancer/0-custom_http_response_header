@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# Install nginx and do some setup
+
+# redirect /redirect_me location to a youtube video
+REDIRECT=' \
+\trewrite ^/redirect_me http://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;'
+
+# Add 404 error page
+NOT_FOUND=' \
+\terror_page 404 /custom_404.html;'
+
+# Add a custom header
+# shellcheck disable=SC2154
+SERVED_BY=" \
+\tadd_header X-Served-By \$hostname;"
+
+ALL="$REDIRECT\n$NOT_FOUND\n$SERVED_BY"
+
+FILE="/etc/nginx/sites-available/default"
+
+sudo apt-get update
+sudo apt-get -y install nginx
+
+echo 'Hello World!' | sudo tee /var/www/html/index.html
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html
+
+sudo sed -i "/^server {.*/a $ALL" "$FILE"
+
+sudo service nginx start
