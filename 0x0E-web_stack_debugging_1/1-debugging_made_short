@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Debug nginx: have running on port 80 and enable default site
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo nginx service restart
+echo "" | sudo tee /run/nginx.pid
