@@ -10,7 +10,6 @@ NOT_FOUND=' \
 \terror_page 404 /custom_404.html;'
 
 # Add a custom header
-# shellcheck disable=SC2154
 SERVED_BY=" \
 \tadd_header X-Served-By \$hostname;"
 
