@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Start nginx with the nginx user as root process
+sudo chown -R nginx:nginx /var/log/nginx
+sudo chown -R nginx:nginx /etc/nginx/
+sudo chmod 644 /etc/nginx/nginx.conf
+sudo su nginx bash -c nginx
