@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
 # Run the whoami command as another user
-sudo su "$1" bash -c whoami
+
+if [ -z "$1" ]; then
+	whoami
+else
+	sudo -u "$1" whoami
+fi
