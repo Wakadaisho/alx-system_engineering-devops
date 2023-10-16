@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Gracefully reload gunicorn workers
+
+kill -HUP "$(ps -C gunicorn ch -o pid | head -1)"
